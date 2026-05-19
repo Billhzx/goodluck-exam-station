@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: exam-prep-station
+    env: python
+    buildCommand: cd backend && pip install -r requirements.txt && cd .. && npm install && npm run build && cp -r dist backend/static
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
