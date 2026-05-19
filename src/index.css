@@ -1,0 +1,51 @@
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ===== Sanrio Theme Variables ===== */
+:root {
+  --color-pink-light: #FFCEE6;
+  --color-pink: #FFB6C1;
+  --color-pink-medium: #F09FC4;
+  --color-pink-dark: #E887A3;
+  --color-blue-light: #A8D8E8;
+  --color-blue: #41B4E2;
+  --color-yellow-soft: #FDDC88;
+  --color-mint: #A8E3D3;
+  --color-lavender: #D4B9E2;
+  --color-white: #FFFFFF;
+  --color-bg: #FFF5F8;
+  --color-text: #5D3A4B;
+  --color-text-secondary: #9E7A8A;
+  --color-border: #FFD6E0;
+  --border-radius: 20px;
+  --border-radius-sm: 12px;
+  --shadow-card: 0 4px 16px rgba(255, 182, 193, 0.25);
+  --shadow-card-hover: 0 6px 24px rgba(255, 182, 193, 0.35);
+}
+
+/* ===== Utility ===== */
+.card {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+}

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(pnpm:*)",
+      "Bash(curl -s \"https://api.open-meteo.com/v1/forecast?latitude=36.06&longitude=103.79&current=temperature_2m,relative_humidity_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=Asia/Shanghai&forecast_days=1\")",
+      "Bash(curl -s \"https://wttr.in/Lanzhou?format=j1\")",
+      "WebSearch",
+      "Bash(npm install:*)",
+      "Bash(npx vite:*)",
+      "Bash(python -c \":*)"
+    ]
+  }
+}

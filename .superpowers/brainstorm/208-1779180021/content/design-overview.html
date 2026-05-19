@@ -1,0 +1,50 @@
+<h2>整体设计方案</h2>
+<p class="subtitle">Python FastAPI 后端 + React 前端 + SQLite</p>
+
+<div class="mockup">
+  <div class="mockup-header">架构总览</div>
+  <div class="mockup-body" style="padding:20px;text-align:center;font-family:monospace;line-height:2;font-size:0.95rem">
+    <div style="background:var(--pink-light,#FCE4EC);border-radius:12px;padding:12px;margin-bottom:12px">
+      📱 浏览器（React SPA）
+    </div>
+    <div style="font-size:1.5rem">⬇️ REST API</div>
+    <div style="background:var(--blue-light,#BBDEFB);border-radius:12px;padding:12px;margin:12px 0">
+      🐍 FastAPI 后端<br>
+      <span style="font-size:0.8rem;opacity:0.7">/api/weather · /api/todos · /api/notes · /api/countdown</span>
+    </div>
+    <div style="font-size:1.5rem">⬇️</div>
+    <div style="background:var(--green-light,#C8E6C9);border-radius:12px;padding:12px;margin-top:12px">
+      🗄️ SQLite 数据库
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>关键设计决策</h3>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-body">
+        <h3>📦 项目结构</h3>
+        <p>前后端放同一仓库。后端在 <code>backend/</code>，前端在 <code>frontend/</code>。部署时 Vite build → FastAPI 托管静态文件，一个命令启动。</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h3>🔌 API 设计</h3>
+        <p>4 组 RESTful 端点：天气代理（后端调 Open-Meteo）、待办 CRUD、笔记 CRUD、倒计时配置。所有数据存 SQLite，不再用 localStorage。</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h3>📱 移动端重设计</h3>
+        <p>全屏宽度卡片，大字体(16px+)，触摸友好的按钮(48px+)，卡片间距加大。桌面端仍保持两列网格。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>整体看上去如何？</h3>
+  <p class="subtitle">这个方向没问题的话就写详细设计文档</p>
+</div>

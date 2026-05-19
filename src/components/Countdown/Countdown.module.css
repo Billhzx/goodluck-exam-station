@@ -1,0 +1,68 @@
+.heading {
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--color-pink-dark);
+  margin-bottom: 12px;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.block {
+  text-align: center;
+  min-width: 56px;
+}
+
+.number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-pink-medium);
+  line-height: 1.2;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.sep {
+  font-size: 1.6rem;
+  color: var(--color-pink-light);
+  font-weight: 700;
+  padding-bottom: 16px;
+}
+
+.motto {
+  text-align: center;
+  margin-top: 12px;
+  color: var(--color-pink-dark);
+  font-size: 0.9rem;
+}
+
+.passed {
+  text-align: center;
+  padding: 20px;
+}
+
+.passedIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.passed p {
+  font-size: 1.3rem;
+  color: var(--color-pink-dark);
+  font-weight: 700;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}

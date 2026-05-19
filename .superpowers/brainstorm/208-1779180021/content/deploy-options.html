@@ -1,0 +1,54 @@
+<h2>部署到哪？— 上线方案选择</h2>
+<p class="subtitle">Python 后端 + React 前端，可以部署到以下平台</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Railway / Render（推荐）</h3>
+      <p>免费额度够用，支持 Python 后端一键部署。前端 Vite build 后放后端静态目录一起部署，一个服务搞定。有自定义域名选项。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Vercel（前端）+ Railway（后端）</h3>
+      <p>前端部署到 Vercel（免费、快），后端单独部署。前后端分离，跨域调用。适合后续扩展。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>国内平台（阿里云/腾讯云）</h3>
+      <p>国内访问速度快，但需要备案域名、付费服务器。如果主要在国内用，体验更好但门槛更高。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="d" onclick="toggleSelect(this)">
+    <div class="letter">D</div>
+    <div class="content">
+      <h3>先不管部署</h3>
+      <p>先把后端和移动端适配搞定，部署的事后面再说。本地能跑起来就行。</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>顺便确认一下</h3>
+  <p class="subtitle">Python 框架偏好？</p>
+  <div class="options">
+    <div class="option" data-choice="fastapi" onclick="toggleSelect(this)">
+      <div class="letter">F</div>
+      <div class="content">
+        <h3>FastAPI（推荐）</h3>
+        <p>现代、快、自动生成 API 文档，类型提示友好</p>
+      </div>
+    </div>
+    <div class="option" data-choice="flask" onclick="toggleSelect(this)">
+      <div class="letter">FL</div>
+      <div class="content">
+        <h3>Flask</h3>
+        <p>经典、简单、灵活，生态成熟</p>
+      </div>
+    </div>
+  </div>
+</div>

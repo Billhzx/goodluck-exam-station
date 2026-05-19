@@ -1,0 +1,61 @@
+<h2>移动端适配 — 你希望页面在手机上怎样呈现？</h2>
+<p class="subtitle">目前是简单两列变一列的响应式，但卡片间距、字体大小、交互区域可能不够好</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>全屏卡片流（推荐）</h3>
+      <p>手机端每张卡片占满屏幕宽度，上下滑动浏览所有内容。大字体、大按钮，拇指友好。类似移动端 App 的卡片式设计。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>底部 Tab 导航</h3>
+      <p>手机端用底部四个 Tab 切换功能（天气/待办/倒计时/笔记），每个功能独占一屏。更像原生 App 体验。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>保持当前布局 + 优化细节</h3>
+      <p>维持单列卡片流，但调优间距、字体、触摸区域大小。改动最小，保持简洁。</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>你之前说"不适配移动端"——主要是哪里不舒服？</h3>
+  <p class="subtitle">帮我把问题定位得更准</p>
+  <div class="options" data-multiselect>
+    <div class="option" data-choice="small" onclick="toggleSelect(this)">
+      <div class="letter">1</div>
+      <div class="content">
+        <h3>字太小 / 看不清</h3>
+        <p>卡片内容在手机上需要放大才能读</p>
+      </div>
+    </div>
+    <div class="option" data-choice="squish" onclick="toggleSelect(this)">
+      <div class="letter">2</div>
+      <div class="content">
+        <h3>卡片太挤 / 布局乱</h3>
+        <p>两列内容在手机上变形不好看</p>
+      </div>
+    </div>
+    <div class="option" data-choice="interact" onclick="toggleSelect(this)">
+      <div class="letter">3</div>
+      <div class="content">
+        <h3>按钮不好点</h3>
+        <p>添加待办、保存记录等操作区域太小</p>
+      </div>
+    </div>
+    <div class="option" data-choice="others" onclick="toggleSelect(this)">
+      <div class="letter">4</div>
+      <div class="content">
+        <h3>其他问题</h3>
+        <p>请在终端里描述一下具体是什么问题</p>
+      </div>
+    </div>
+  </div>
+</div>

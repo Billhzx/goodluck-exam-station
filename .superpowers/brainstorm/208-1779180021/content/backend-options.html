@@ -1,0 +1,47 @@
+<h2>为备考小站加后端 — 你想做到什么程度？</h2>
+<p class="subtitle">这会决定用什么样的技术方案</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>轻量后端（推荐）</h3>
+      <p>用 Express/Koa 搭一个简单 API，数据存 JSON 文件或 SQLite。能上线，数据持久化在服务端，单用户使用即可。部署到 Railway/Render 等免费平台。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>全栈应用</h3>
+      <p>Next.js 前后端一体，数据库用 PostgreSQL/MySQL。支持多用户、账号登录、数据同步。功能更完善但复杂度高很多。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>BaaS 后端即服务</h3>
+      <p>用 Supabase/Firebase 做后端，前端直接调用。自带数据库、认证、实时同步。不需要自己写后端代码，但要学平台用法。</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>补充问题</h3>
+  <p class="subtitle">后端语言偏好？</p>
+  <div class="options">
+    <div class="option" data-choice="node" onclick="toggleSelect(this)">
+      <div class="letter">JS</div>
+      <div class="content">
+        <h3>Node.js (JavaScript)</h3>
+        <p>和前端统一语言，上手快</p>
+      </div>
+    </div>
+    <div class="option" data-choice="python" onclick="toggleSelect(this)">
+      <div class="letter">PY</div>
+      <div class="content">
+        <h3>Python (Flask/FastAPI)</h3>
+        <p>简洁易读，AI/数据处理友好</p>
+      </div>
+    </div>
+  </div>
+</div>
