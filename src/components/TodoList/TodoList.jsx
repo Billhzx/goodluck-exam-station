@@ -1,32 +1,20 @@
 import { useState } from 'react';
-import useLocalStorage from '../../hooks/useLocalStorage';
+import useTodos from '../../hooks/useTodos';
 import styles from './TodoList.module.css';
 
-function makeId() {
-  return Date.now().toString(36) + Math.random().toString(36).slice(2);
-}
-
 export default function TodoList() {
-  const [todos, setTodos] = useLocalStorage('exam-prep-todos', []);
+  const { todos, loading, addTodo, toggleTodo, deleteTodo } = useTodos();
   const [text, setText] = useState('');
 
-  function addTodo() {
+  function handleAdd() {
     const trimmed = text.trim();
     if (!trimmed) return;
-    setTodos([...todos, { id: makeId(), text: trimmed, completed: false, createdAt: new Date().toISOString() }]);
+    addTodo(trimmed);
     setText('');
   }
 
-  function toggleTodo(id) {
-    setTodos(todos.map(t => t.id === id ? { ...t, completed: !t.completed } : t));
-  }
-
-  function deleteTodo(id) {
-    setTodos(todos.filter(t => t.id !== id));
-  }
-
   function handleKeyDown(e) {
-    if (e.key === 'Enter') addTodo();
+    if (e.key === 'Enter') handleAdd();
   }
 
   const activeTodos = todos.filter(t => !t.completed);
@@ -45,10 +33,11 @@ export default function TodoList() {
           onKeyDown={handleKeyDown}
           placeholder="🐣 添加备考任务..."
         />
-        <button className={styles.addBtn} onClick={addTodo}>+</button>
+        <button className={styles.addBtn} onClick={handleAdd}>+</button>
       </div>
 
-      {todos.length === 0 && (
+      {loading && <p className={styles.empty}>加载中...</p>}
+      {!loading && todos.length === 0 && (
         <p className={styles.empty}>还没有待办事项 ✨ 加一个吧~</p>
       )}
 
