@@ -66,3 +66,17 @@
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
 }
+
+@media (max-width: 640px) {
+  .number {
+    font-size: 1.8rem;
+  }
+
+  .block {
+    min-width: 48px;
+  }
+
+  .sep {
+    font-size: 1.3rem;
+  }
+}

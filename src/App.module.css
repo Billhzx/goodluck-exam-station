@@ -11,14 +11,6 @@
   margin-top: 20px;
 }
 
-.comingSoon {
-  composes: card from './index.css';
-  text-align: center;
-  padding: 40px 20px;
-  color: var(--color-text-secondary);
-  font-size: 0.95rem;
-}
-
 .footer {
   text-align: center;
   padding: 24px 0 10px;
@@ -27,7 +19,19 @@
 }
 
 @media (max-width: 640px) {
+  .app {
+    padding: 0 12px 20px;
+  }
+
   .grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .footer {
+    font-size: 0.85rem;
+    padding: 20px 0 8px;
   }
 }

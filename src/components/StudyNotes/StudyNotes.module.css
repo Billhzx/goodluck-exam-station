@@ -86,3 +86,23 @@
   font-size: 0.85rem;
   padding: 8px 0;
 }
+
+@media (max-width: 640px) {
+  .textarea {
+    font-size: 16px;
+    padding: 14px;
+    min-height: 120px;
+  }
+
+  .dateInput {
+    font-size: 16px;
+    padding: 8px 14px;
+    min-height: 44px;
+  }
+
+  .saveBtn {
+    padding: 12px 0;
+    font-size: 1rem;
+    min-height: 48px;
+  }
+}

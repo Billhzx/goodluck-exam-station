@@ -123,3 +123,18 @@
 .retryBtn:hover {
   background: var(--color-bg);
 }
+
+@media (max-width: 640px) {
+  .icon {
+    font-size: 2rem;
+  }
+
+  .temp {
+    font-size: 1.8rem;
+  }
+
+  .details {
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+}

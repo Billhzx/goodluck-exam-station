@@ -49,3 +49,15 @@ body {
 .card:hover {
   box-shadow: var(--shadow-card-hover);
 }
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 20px 16px;
+    border-radius: 16px;
+    margin: 0 0 16px;
+  }
+}
