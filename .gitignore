@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+*.pyo
+backend/exam_prep.db
